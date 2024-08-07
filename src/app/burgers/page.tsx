@@ -1,9 +1,11 @@
-import Image from "next/image";
+import React from "react";
 
-export default function Home() {
+const Burgers = () => {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-20 bg-white text-cyan-600">
-      <h1>TEXT</h1>
+      Burgers
     </main>
   );
-}
+};
+
+export default Burgers;
