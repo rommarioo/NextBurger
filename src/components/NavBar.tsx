@@ -6,16 +6,16 @@ const NavBar = () => {
     <nav>
       <ul className="flex gap-5">
         <li>
-          <Link href="/">Home</Link>
+          <Link href="/">На главную</Link>
         </li>
         <li>
-          <Link href="/about">About us</Link>
+          <Link href="/about">О нас</Link>
         </li>
         <li>
-          <Link href="/raiting">Rating</Link>
+          <Link href="/raiting">Отзывы</Link>
         </li>
         <li>
-          <Link href="/burgers">Burgers</Link>
+          <Link href="/burgers">Бургеры</Link>
         </li>
       </ul>
     </nav>

@@ -2,8 +2,15 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-20 bg-white text-cyan-600">
-      <h1>TEXT</h1>
+    <main className="flex min-h[100%] flex-col items-center justify-between p-20 bg-white text">
+      <h1 className="text-3xl p-2">Добро пожаловать в мир бургеров!</h1>
+      <p>
+        В нашей бургерной мы знаем, что настоящий бургер — это не просто еда,
+        это искусство! Каждый наш бургер создан с любовью и страстью, чтобы
+        подарить вам незабываемые вкусовые ощущения. Мы используем только самые
+        свежие и качественные ингредиенты, чтобы каждая котлета, каждая булочка
+        и каждый соус были на высшем уровне.
+      </p>
     </main>
   );
 }
