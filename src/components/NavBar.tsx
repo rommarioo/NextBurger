@@ -5,16 +5,16 @@ const NavBar = () => {
   return (
     <nav>
       <ul className="flex gap-5">
-        <li>
+        <li className="hover:scale-125 duration-500 cursor-pointer">
           <Link href="/">На главную</Link>
         </li>
-        <li>
+        <li className="hover:scale-125 duration-500 cursor-pointer">
           <Link href="/about">О нас</Link>
         </li>
-        <li>
+        <li className="hover:scale-125 duration-500 cursor-pointer">
           <Link href="/raiting">Отзывы</Link>
         </li>
-        <li>
+        <li className="hover:scale-125 duration-500 cursor-pointer">
           <Link href="/burgers">Бургеры</Link>
         </li>
       </ul>

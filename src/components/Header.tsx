@@ -7,7 +7,10 @@ const Header = () => {
     <header className="flex justify-between p-5 bg-black ">
       <div className="flex items-center justify-between w-full ">
         <Link href="/">
-          <FaHamburger size={40} />
+          <FaHamburger
+            size={40}
+            className="hover:scale-125 duration-500 cursor-pointer"
+          />
         </Link>
         <NavBar />
       </div>
