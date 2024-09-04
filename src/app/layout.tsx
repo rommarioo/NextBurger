@@ -22,10 +22,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={inter.className}>
         <Header />
-        <div>{burgers}</div>
-
         {children}
-
         <Footer />
       </body>
     </html>
