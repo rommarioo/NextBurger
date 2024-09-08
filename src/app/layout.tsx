@@ -13,17 +13,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  burgers,
 }: Readonly<{
   children: React.ReactNode;
-  burgers: React.ReactNode;
 }>) {
   return (
     <html lang="ru">
       <body className={inter.className}>
         <Header />
-        <main className="min-h-full pb-10 ">{children}</main>
-
+        <main className="relative pb-20">{children}</main>
         <Footer />
       </body>
     </html>

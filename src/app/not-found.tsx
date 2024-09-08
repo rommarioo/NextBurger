@@ -25,7 +25,7 @@ const NotFound = () => {
       <h1 className="text-3xl p-2 mb-4">404 Page Not Found</h1>
       <Link
         href="/"
-        className="font-bold text-2xl duration-500 hover:scale-125 "
+        className="font-extrabold text-2xl duration-500 hover:scale-125 "
       >
         Перейти на главную
       </Link>
