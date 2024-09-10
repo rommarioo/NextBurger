@@ -8,7 +8,9 @@ type Burger = {
 };
 
 export const getBurgerbyId = async (id: string): Promise<Burger> => {
-  const res = await fetch(`http://localhost:8000/item/${id}`);
+  const res = await fetch(`http://localhost:8000/item/${id}`, {
+    cache: "no-store",
+  });
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }

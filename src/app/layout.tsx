@@ -13,14 +13,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="ru">
       <body className={inter.className}>
         <Header />
-        <main className="relative pb-20">{children}</main>
+        <main className="relative pb-20">
+          {children}
+          {modal}
+        </main>
         <Footer />
       </body>
     </html>

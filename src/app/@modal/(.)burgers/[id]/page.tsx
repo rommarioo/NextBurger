@@ -1,15 +1,14 @@
-import React from "react";
-import BurgerDisplay from "./BurgerDisplay";
-import { getBurgerbyId } from "@/helpers/getBurgerById";
+import BurgerDisplay from "@/app/burgers/[id]/BurgerDisplay";
 import ModalBurger from "@/components/ModalBurger";
+import { getBurgerbyId } from "@/helpers/getBurgerById";
+import React from "react";
 
 const Burger = async ({ params }: { params: { id: string } }) => {
-  console.log(params);
   const burger = await getBurgerbyId(params.id);
   return (
-    <div>
+    <ModalBurger>
       <BurgerDisplay burger={burger} />
-    </div>
+    </ModalBurger>
   );
 };
 
