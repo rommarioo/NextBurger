@@ -17,7 +17,7 @@ const BurgerMenu = ({ burgers }: { burgers: Burger[] }) => {
         return (
           <div
             key={el.id}
-            className="flex flex-col rounded-lg border bg-white hover:scale-105 duration-300 "
+            className="flex flex-col rounded-lg border bg-white "
           >
             <Link href={`/burgers/${el.id}`}>
               <Image
@@ -29,7 +29,7 @@ const BurgerMenu = ({ burgers }: { burgers: Burger[] }) => {
               ></Image>
               <div className="p-2">
                 <p className="font-extrabold text-center">{el.name}</p>
-                <p className="font-bold ">
+                <p className="font-bold">
                   price: {el.price}
                   {"$"}
                 </p>

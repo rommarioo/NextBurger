@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={inter.className}>
         <Header />
-        <main className="relative pb-20">
+        <main className="h-full relative pb-20">
           {children}
           {modal}
         </main>

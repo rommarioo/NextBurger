@@ -1,4 +1,4 @@
-import BurgerDisplay from "@/app/burgers/[id]/BurgerDisplay";
+import BurgerDisplay from "@/components/BurgerDisplay";
 import ModalBurger from "@/components/ModalBurger";
 import { getBurgerbyId } from "@/helpers/getBurgerById";
 import React from "react";
