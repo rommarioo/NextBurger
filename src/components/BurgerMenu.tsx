@@ -19,7 +19,7 @@ const BurgerMenu = ({ burgers }: { burgers: Burger[] }) => {
             key={el.id}
             className="flex flex-col rounded-lg border bg-white "
           >
-            <Link href={`/burgers/${el.id}`}>
+            <Link href={`/burgers/${el.id}`} scroll={false}>
               <Image
                 className="self-center rounded-t-lg w-full"
                 width={350}
