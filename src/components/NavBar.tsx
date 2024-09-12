@@ -6,13 +6,13 @@ const NavBar = () => {
     <nav>
       <ul className="flex gap-5 text-base">
         <li className="hover:translate-y-[-3px] duration-500 cursor-pointer">
-          <Link href="/">На главную</Link>
+          <Link href="/">Home</Link>
         </li>
         <li className="hover:translate-y-[-3px] duration-500 cursor-pointer">
-          <Link href="/about">О нас</Link>
+          <Link href="/about">Shopping Cart</Link>
         </li>
         <li className="hover:translate-y-[-3px] duration-500 cursor-pointer">
-          <Link href="/raiting">Отзывы</Link>
+          <Link href="/raiting">Ratings</Link>
         </li>
       </ul>
     </nav>

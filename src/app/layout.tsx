@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { AppWrapper } from "@/context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,12 +22,14 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={inter.className}>
-        <Header />
-        <main className="h-full relative pb-20">
-          {children}
-          {modal}
-        </main>
-        <Footer />
+        <AppWrapper>
+          <Header />
+          <main className="relative">
+            {children}
+            {modal}
+          </main>
+          <Footer />
+        </AppWrapper>
       </body>
     </html>
   );
