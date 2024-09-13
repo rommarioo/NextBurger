@@ -1,5 +1,3 @@
-"use client";
-import { useAppContext } from "@/context";
 import Image from "next/image";
 import React from "react";
 
@@ -10,21 +8,10 @@ type Burger = {
   price: number;
   weight: number;
   image: string;
+  count?: number;
 };
 
 const BurgerDisplay = ({ burger }: { burger: Burger }) => {
-  const { state, setState } = useAppContext();
-  const onClick = () => {
-    setState([
-      ...state,
-      {
-        burgerName: burger.name,
-        image: burger.image,
-        price: burger.price,
-      },
-    ]);
-    console.log(state);
-  };
   return (
     <div className="text-black flex items-center gap-x-4 w-fit max-lg:flex-col ">
       <Image
@@ -68,16 +55,6 @@ const BurgerDisplay = ({ burger }: { burger: Burger }) => {
             </p>
           </div>
         </div>
-
-        <button
-          className="font-bold text-left border self-end px-6 py-2 rounded-lg bg-green-600 hover:text-white mt-4 
-         hover:bg-green-700 duration-300 max-lg:self-center "
-          onClick={onClick}
-        >
-          {"Buy for "}
-          {burger.price}
-          {"$"}
-        </button>
       </div>
     </div>
   );
