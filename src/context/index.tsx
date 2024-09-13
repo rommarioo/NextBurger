@@ -1,16 +1,10 @@
 "use client";
+import { Burger } from "@/helpers/types";
 import { createContext, useState, useContext } from "react";
 
-type ContextBurger = {
-  id: string;
-  burgerName: string;
-  image: string;
-  price: number;
-  count?: number;
-};
 type AppContextType = {
-  state: ContextBurger[];
-  setState: (state: ContextBurger[]) => void;
+  state: Burger[];
+  setState: (state: Burger[]) => void;
 };
 const AppContext = createContext<AppContextType>({
   state: [],
@@ -18,7 +12,7 @@ const AppContext = createContext<AppContextType>({
 });
 
 export const AppWrapper = ({ children }: { children: React.ReactNode }) => {
-  const [state, setState] = useState<ContextBurger[]>([]);
+  const [state, setState] = useState<Burger[]>([]);
 
   return (
     <AppContext.Provider value={{ state, setState }}>

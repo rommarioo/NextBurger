@@ -3,16 +3,7 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import { useAppContext } from "@/context";
-
-type Burger = {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  weight: number;
-  image: string;
-  count?: number;
-};
+import { Burger } from "@/helpers/types";
 
 const BurgerMenu = ({ burgers }: { burgers: Burger[] }) => {
   const { state, setState } = useAppContext();
@@ -21,7 +12,9 @@ const BurgerMenu = ({ burgers }: { burgers: Burger[] }) => {
       ...state,
       {
         id: burger.id,
-        burgerName: burger.name,
+        name: burger.name,
+        description: burger.description,
+        weight: burger.weight,
         image: burger.image,
         price: burger.price,
         count: 1,
@@ -89,7 +82,7 @@ const BurgerMenu = ({ burgers }: { burgers: Burger[] }) => {
               <div className="flex">
                 <button
                   onClick={() => removeBurgers(el)}
-                  className=" w-[50%] bg-red-700 py-1 px-2 rounded-bl-lg hover:text-white  hover:bg-red-600 duration-300 "
+                  className=" w-[50%] bg-red-600 py-1 px-2 rounded-bl-lg hover:text-white  hover:bg-red-500 duration-300 "
                 >
                   Remove
                 </button>
