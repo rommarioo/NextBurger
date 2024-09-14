@@ -62,10 +62,10 @@ const BurgerCart = () => {
               <div className="flex flex-col w-full">
                 <p className="font-bold">{el.name}</p>
                 <p>
-                  price:{el.price}
+                  Price:{el.price}
                   {"$"}
                 </p>
-                <p>count:{el.count}</p>
+                <p>Quantity:{el.count}</p>
               </div>
               <div className="flex flex-col gap-y-2 text-2xl">
                 <button

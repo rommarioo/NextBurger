@@ -60,7 +60,7 @@ const BurgerMenu = ({ burgers }: { burgers: Burger[] }) => {
         return (
           <div
             key={el.id}
-            className="flex flex-col rounded-lg border bg-white "
+            className="flex flex-col justify-between rounded-lg border bg-white "
           >
             <Link href={`/burgers/${el.id}`} scroll={false}>
               <Image
@@ -72,14 +72,23 @@ const BurgerMenu = ({ burgers }: { burgers: Burger[] }) => {
               ></Image>
               <div className="p-2">
                 <p className="font-extrabold text-center">{el.name}</p>
-                <p className="font-bold">
-                  price: {el.price}
-                  {"$"}
+                <p className="text-center my-3 max-md:hidden">
+                  {el.description}
                 </p>
+                <div className="flex justify-between max-sm:text-xs max-sm:flex-col max-sm:items-center">
+                  <p className="font-bold">
+                    Price: {el.price}
+                    {"$"}
+                  </p>
+                  <p className="font-bold">
+                    Weight:{el.weight}
+                    {"g"}
+                  </p>
+                </div>
               </div>
             </Link>
             {state.find((item) => item.id === el.id) ? (
-              <div className="flex">
+              <div className="flex max-sm:text-xs">
                 <button
                   onClick={() => removeBurgers(el)}
                   className=" w-[50%] bg-red-600 py-1 px-2 rounded-bl-lg hover:text-white  hover:bg-red-500 duration-300 "
@@ -96,7 +105,7 @@ const BurgerMenu = ({ burgers }: { burgers: Burger[] }) => {
             ) : (
               <button
                 onClick={() => onClick(el)}
-                className=" w-full bg-green-700 py-1 px-2 rounded-b-lg hover:text-white  hover:bg-green-600 duration-300 "
+                className=" w-full bg-green-700 max-sm:text-xs py-1 px-2 rounded-b-lg hover:text-white  hover:bg-green-600 duration-300 "
               >
                 Add to cart
               </button>
